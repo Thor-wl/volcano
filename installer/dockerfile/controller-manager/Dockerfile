@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-FROM alpine:latest
+FROM arm64v8/alpine
 
 ADD vc-controller-manager /vc-controller-manager
 ENTRYPOINT ["/vc-controller-manager"]

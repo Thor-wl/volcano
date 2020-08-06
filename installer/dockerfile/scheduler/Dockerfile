@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-FROM alpine:latest
+FROM arm64v8/alpine
 
 ADD vc-scheduler /vc-scheduler
 ENTRYPOINT ["/vc-scheduler"]

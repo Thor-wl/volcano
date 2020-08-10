@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-FROM alpine:latest
+FROM docker.io/arm64v8/alpine
 
 # Install requirements for admission service
 # Install requirements

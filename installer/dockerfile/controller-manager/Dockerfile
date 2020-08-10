@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-FROM arm64v8/alpine
+FROM docker.io/arm64v8/alpine
 
 ADD vc-controller-manager /vc-controller-manager
-ENTRYPOINT ["/vc-controller-manager"]
+ENTRYPOINT ["sh", "-c", "/vc-controller-manager"]

@@ -19,4 +19,4 @@ FROM volcanosh/vc-webhook-manager-base:1.3.1
 
 ADD vc-webhook-manager /vc-webhook-manager
 ADD gen-admission-secret.sh /gen-admission-secret.sh
-ENTRYPOINT ["/vc-webhook-manager"]
+ENTRYPOINT ["sh", "-c", "/vc-webhook-manager"]

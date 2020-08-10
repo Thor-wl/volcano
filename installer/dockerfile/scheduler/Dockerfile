@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-FROM arm64v8/alpine
+FROM docker.io/arm64v8/alpine
 
 ADD vc-scheduler /vc-scheduler
-ENTRYPOINT ["/vc-scheduler"]
+ENTRYPOINT ["sh", "-c", "/vc-scheduler"]

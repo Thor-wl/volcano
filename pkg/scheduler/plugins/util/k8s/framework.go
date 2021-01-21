@@ -21,6 +21,7 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/client-go/informers"
 	"k8s.io/client-go/kubernetes"
+	"k8s.io/client-go/tools/events"
 	"k8s.io/kubernetes/pkg/controller/volume/scheduling"
 	"k8s.io/kubernetes/pkg/scheduler/apis/config"
 	"k8s.io/kubernetes/pkg/scheduler/framework/v1alpha1"
@@ -91,6 +92,14 @@ func (f *Framework) SharedInformerFactory() informers.SharedInformerFactory {
 // VolumeBinder returns the volume binder used by scheduler.
 func (f *Framework) VolumeBinder() scheduling.SchedulerVolumeBinder {
 	panic("not implemented")
+	return nil
+}
+
+func (f *Framework) EventRecorder() events.EventRecorder {
+	return nil
+}
+
+func (f *Framework) PreemptHandle() v1alpha1.PreemptHandle {
 	return nil
 }
 

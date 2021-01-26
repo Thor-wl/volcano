@@ -250,6 +250,7 @@ func ValidateVictims(preemptor *api.TaskInfo, node *api.NodeInfo, victims []*api
 
 // ResourceReservation is struct used for resource reservation
 type ResourceReservation struct {
+	HasReserved bool
 	TargetJob   *api.JobInfo
 	LockedNodes map[string]*api.NodeInfo
 }

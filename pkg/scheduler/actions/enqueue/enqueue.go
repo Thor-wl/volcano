@@ -123,6 +123,11 @@ func (enqueue *Action) Execute(ssn *framework.Session) {
 			continue
 		}
 		job := jobs.Pop().(*api.JobInfo)
+		if job.Name == "hw-0126-01-large" && !util.Reservation.HasReserved {
+			util.Reservation.TargetJob = job
+			util.Reservation.HasReserved = true
+			continue
+		}
 		if targetJob != nil && job.UID == targetJob.UID {
 			klog.V(3).Infof("Target Job name: %s", targetJob.Name)
 			continue

@@ -213,6 +213,7 @@ func (alloc *Action) Execute(ssn *framework.Session) {
 				}
 			}
 
+
 			// If not candidate nodes for this task, skip it.
 			if len(candidateNodes) == 0 {
 				continue
